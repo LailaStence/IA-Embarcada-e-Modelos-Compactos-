@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/atividade_sensor_dht11.bin'
+elf = 'build/atividade_sensor_dht11.elf'

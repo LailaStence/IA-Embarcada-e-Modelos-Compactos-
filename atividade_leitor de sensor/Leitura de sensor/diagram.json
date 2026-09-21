@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Laila Stence",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": 19.02,
+      "left": 62.17,
+      "attrs": { "builder": "esp-idf" }
+    },
+    { "type": "wokwi-dht22", "id": "dht1", "top": 19.5, "left": -24.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3.1", "red", [ "h-28.8", "v-124.8", "h134.45" ] ],
+    [ "esp:GND.2", "dht1:GND", "black", [ "v-57.6", "h-220.8", "v172.8", "h86.4" ] ],
+    [ "esp:4", "dht1:SDA", "green", [ "h19.15", "v-76.8", "h-144", "v153.6", "h57.5" ] ]
+  ],
+  "dependencies": {}
+}
